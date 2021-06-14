@@ -94,7 +94,7 @@ static CGFloat kSpace = 2;
 	//style.lineBreakMode = NSLineBreakByTruncatingMiddle;
 	[as addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, as.length)];
 	
-	UIColor *color = self.selected ? [UIColor whiteColor] : self.color;
+	UIColor *color = self.selected ? [UIColor whiteColor] : [UIColor blackColor];
 	[as addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, as.length)];
 	
 	self.attrString = as;
