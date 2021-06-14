@@ -74,6 +74,7 @@ static const CGFloat dotSize = 4;
     return self;
 }
 
+// public
 - (void)setActivityIndicatorVisible:(BOOL)visible
 {
     if (!visible) {
@@ -146,6 +147,7 @@ static const CGFloat dotSize = 4;
 	[CATransaction commit];
 }
 
+// public
 - (void)setAccessoryTypes:(MGCDayColumnCellAccessoryType)accessoryTypes
 {
     _accessoryTypes = accessoryTypes;

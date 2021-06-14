@@ -152,6 +152,8 @@ static const CGFloat kMaxHourSlotHeight = 150.;
 @property (nonatomic) CGFloat hourSlotHeightForGesture;
 @property (copy, nonatomic) dispatch_block_t scrollViewAnimationCompletionBlock;
 
+// @property (nonatomic) MGCDayColumnCell dayColumnCell;
+
 @property (nonatomic) OSCache *dimmedTimeRangesCache;          // cache for dimmed time ranges (indexed by date)
 
 @end
@@ -1830,6 +1832,11 @@ static const CGFloat kMaxHourSlotHeight = 150.;
     
     if (attrStr) {
         dayCell.dayLabel.attributedText = attrStr;
+
+        if ([self.calendar mgc_isDate:date sameDayAsDate:[NSDate date]]) {
+            accessoryTypes |= MGCDayColumnCellAccessoryMark;
+            dayCell.markColor = self.tintColor;
+        }
     }
     else {
         
@@ -1933,6 +1940,8 @@ static const CGFloat kMaxHourSlotHeight = 150.;
         
         return view;
     }
+
+    return nil;
 }
 
 #pragma mark - MGCTimedEventsViewLayoutDelegate

@@ -29,9 +29,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MGCDayColumnCell.h"
 
 @class MGCEventView;
 @class MGCDateRange;
+@class MGCDayColumnCell;
 
 @protocol MGCDayPlannerViewDataSource;
 @protocol MGCDayPlannerViewDelegate;
@@ -400,6 +402,13 @@ typedef NS_ENUM(NSUInteger, MGCDayPlannerCoveringType) {
 	@return		The event view or nil if the event view is not visible, or parameters are out of range.
  */
 - (MGCEventView*)eventViewOfType:(MGCEventType)type atIndex:(NSUInteger)index date:(NSDate*)date;
+
+/*!
+	@abstract	Returns the visible event view with specified type, index and date.
+	@param		indexPath		The index of the day cell event.
+	@return		The event view or nil if the event view is not visible, or parameters are out of range.
+ */
+- (UICollectionViewCell*)dayColumnCellAtIndexPath:(NSIndexPath*)indexPath;
 
 /*!
 	@abstract	Returns the area of the cell shown when a new event is created.
