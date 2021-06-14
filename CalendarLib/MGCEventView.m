@@ -37,7 +37,7 @@
 {
     if (self = [super initWithFrame:frame]) {
         self.visibleHeight = CGFLOAT_MAX;
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
         self.clipsToBounds = YES;
     }
     return self;
