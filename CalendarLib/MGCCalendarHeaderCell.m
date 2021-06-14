@@ -27,10 +27,10 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {        
-        self.selectedDayBackgroundColor = [UIColor darkGrayColor];
+        self.selectedDayBackgroundColor = [UIColor whiteColor];
         self.selectedDayTextColor = [UIColor whiteColor];
         self.todayColor = [UIColor redColor];
-        self.weekendColor = [UIColor grayColor];
+        self.weekendColor = [UIColor whiteColor];
     }
     return self;
 }
@@ -97,10 +97,10 @@
     self.dayNumberLabel.textColor = [UIColor blackColor];
     self.today = NO;
     self.weekend = NO;
-    self.selectedDayBackgroundColor = [UIColor darkGrayColor];
+    self.selectedDayBackgroundColor = [UIColor whiteColor];
     self.selectedDayTextColor = [UIColor whiteColor];
     self.todayColor = [UIColor redColor];
-    self.weekendColor = [UIColor grayColor];
+    self.weekendColor = [UIColor whiteColor];
 }
 
 @end
