@@ -853,7 +853,7 @@ static const CGFloat kMaxHourSlotHeight = 150.;
 {
     if (!_timedEventsView) {
 		_timedEventsView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.timedEventsViewLayout];
-		_timedEventsView.backgroundColor = [UIColor clearColor];
+		_timedEventsView.backgroundColor = [UIColor whiteColor];
 		_timedEventsView.dataSource = self;
 		_timedEventsView.delegate = self;
 		_timedEventsView.showsVerticalScrollIndicator = NO;
@@ -918,7 +918,7 @@ static const CGFloat kMaxHourSlotHeight = 150.;
 		layout.minimumLineSpacing = 0;
         
 		_dayColumnsView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-		_dayColumnsView.backgroundColor = [UIColor clearColor];
+		_dayColumnsView.backgroundColor = [UIColor whiteColor];
 		_dayColumnsView.dataSource = self;
 		_dayColumnsView.delegate = self;
 		_dayColumnsView.showsHorizontalScrollIndicator = NO;
@@ -935,7 +935,7 @@ static const CGFloat kMaxHourSlotHeight = 150.;
 {
 	if (!_timeScrollView) {
 		_timeScrollView = [[UIScrollView alloc]initWithFrame:CGRectZero];
-		_timeScrollView.backgroundColor = [UIColor clearColor];
+		_timeScrollView.backgroundColor = [UIColor whiteColor];
 		_timeScrollView.delegate = self;
 		_timeScrollView.showsVerticalScrollIndicator = NO;
 		_timeScrollView.decelerationRate = UIScrollViewDecelerationRateFast;

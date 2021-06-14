@@ -124,7 +124,7 @@ static const CGFloat dotSize = 4;
 		}
 		else  {
 			self.dayLabel.layer.cornerRadius = 0;
-			self.dayLabel.layer.backgroundColor = [UIColor clearColor].CGColor;
+			self.dayLabel.layer.backgroundColor = [UIColor whiteColor].CGColor;
 		}
 	}
 	

@@ -130,7 +130,7 @@ static CGFloat kSpace = 2;
 	else if (self.style & MGCStandardEventViewStylePlain)
 		self.backgroundColor = [self.color colorWithAlphaComponent:.3];
 	else
-		self.backgroundColor = [UIColor clearColor];
+		self.backgroundColor = [UIColor whiteColor];
 	
 	[self setNeedsDisplay];
 }

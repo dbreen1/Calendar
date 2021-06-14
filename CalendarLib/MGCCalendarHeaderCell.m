@@ -75,7 +75,7 @@
         self.dayNumberLabel.textColor = self.selectedDayTextColor;
     }
     else {
-        self.dayNumberLabel.backgroundColor = [UIColor clearColor];
+        self.dayNumberLabel.backgroundColor = [UIColor whiteColor];
         self.dayNumberLabel.textColor = self.selectedDayBackgroundColor;
     }
     

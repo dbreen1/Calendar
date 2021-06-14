@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
     
-    self.dayPlannerView.backgroundColor = [UIColor clearColor];
+    self.dayPlannerView.backgroundColor = [UIColor whiteColor];
     self.dayPlannerView.backgroundView = [UIView new];
     self.dayPlannerView.backgroundView.backgroundColor = [UIColor whiteColor];
     
