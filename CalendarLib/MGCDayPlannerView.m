@@ -884,7 +884,7 @@ static const CGFloat kMaxHourSlotHeight = 150.;
 {
 	if (!_allDayEventsView && self.showsAllDayEvents) {
 		_allDayEventsView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.allDayEventsViewLayout];
-		_allDayEventsView.backgroundColor = [UIColor clearColor];
+		_allDayEventsView.backgroundColor = [UIColor whiteColor];
 		_allDayEventsView.dataSource = self;
 		_allDayEventsView.delegate = self;
 		_allDayEventsView.showsVerticalScrollIndicator = YES;
