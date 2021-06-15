@@ -71,8 +71,9 @@ static CGFloat kSpace = 2;
 		[s appendString:self.title];
 	}
 	
+  // UIFont *boldFont = [UIFont fontWithDescriptor:[[self.font fontDescriptor] fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold] size:self.font.pointSize];
 	UIFont *titleFont = [UIFont fontWithDescriptor:[self.font fontDescriptor] size:self.font.pointSize];
-  UIFont *boldFontSub = [UIFont fontWithDescriptor:[[self.font fontDescriptor] fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold]];
+  UIFont *boldFontSub = [UIFont fontWithDescriptor:[self.font fontDescriptor] fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
 
 	NSMutableAttributedString *as = [[NSMutableAttributedString alloc]initWithString:s attributes:@{NSFontAttributeName: titleFont ?: self.font }];
 	
