@@ -56,7 +56,7 @@ static const CGFloat kCellSpacing = 2.;		// space around cells
 
 		self.contentSize = CGSizeMake(frame.size.width, 400);
 		
-		self.backgroundColor = [UIColor whiteColor];
+		self.backgroundColor = [UIColor clearColor];
 		
 		self.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
 		self.clipsToBounds = YES;
