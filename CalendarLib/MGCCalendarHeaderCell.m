@@ -75,7 +75,7 @@
         self.dayNumberLabel.textColor = self.selectedDayTextColor;
     }
     else {
-        self.dayNumberLabel.backgroundColor = [UIColor whiteColor];
+        self.dayNumberLabel.backgroundColor = [UIColor clearColor];
         self.dayNumberLabel.textColor = self.selectedDayBackgroundColor;
     }
     
@@ -97,10 +97,10 @@
     self.dayNumberLabel.textColor = [UIColor blackColor];
     self.today = NO;
     self.weekend = NO;
-    self.selectedDayBackgroundColor = [UIColor whiteColor];
+    self.selectedDayBackgroundColor = [UIColor darkGrayColor];
     self.selectedDayTextColor = [UIColor whiteColor];
     self.todayColor = [UIColor redColor];
-    self.weekendColor = [UIColor whiteColor];
+    self.weekendColor = [UIColor grayColor];
 }
 
 @end

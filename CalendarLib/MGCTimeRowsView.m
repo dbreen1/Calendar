@@ -46,7 +46,7 @@
 - (id)initWithFrame:(CGRect)frame
 {
 	if (self = [super initWithFrame:frame]) {
-		self.backgroundColor = [UIColor whiteColor];
+		self.backgroundColor = [UIColor clearColor];
 		
 		_calendar = [NSCalendar currentCalendar];
 		_hourSlotHeight = 65;
