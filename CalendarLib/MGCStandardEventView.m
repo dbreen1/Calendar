@@ -71,14 +71,14 @@ static CGFloat kSpace = 2;
 		[s appendString:self.title];
 	}
 	
-	UIFont *boldFont = [UIFont fontWithDescriptor:[self.font fontDescriptor] size:self.font.pointSize];
-	NSMutableAttributedString *as = [[NSMutableAttributedString alloc]initWithString:s attributes:@{NSFontAttributeName: boldFont ?: self.font }];
+	UIFont *titleFont = [UIFont fontWithDescriptor:[self.font fontDescriptor] size:self.font.pointSize];
+  UIFont *boldFontSub = [UIFont fontWithDescriptor:[[self.font fontDescriptor] fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold]];
+
+	NSMutableAttributedString *as = [[NSMutableAttributedString alloc]initWithString:s attributes:@{NSFontAttributeName: titleFont ?: self.font }];
 	
 	if (self.subtitle && self.subtitle.length > 0 && self.style & MGCStandardEventViewStyleSubtitle) {
-    UIFont *boldFontSub = [UIFont fontWithDescriptor:[[self.font fontDescriptor] fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold]];
-
 		NSMutableString *s  = [NSMutableString stringWithFormat:@"\n%@", self.subtitle];
-    NSMutableAttributedString *subtitle = [[NSMutableAttributedString alloc]initWithString:s attributes:@{NSFontAttributeName: boldFont ?: self.font }];
+    NSMutableAttributedString *subtitle = [[NSMutableAttributedString alloc]initWithString:s attributes:@{NSFontAttributeName: boldFontSub ?: self.font }];
 
 		// NSMutableAttributedString *subtitle = [[NSMutableAttributedString alloc]initWithString:s attributes:@{NSFontAttributeName:self.font}];
 		[as appendAttributedString:subtitle];
