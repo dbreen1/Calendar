@@ -866,6 +866,7 @@ static const CGFloat kMaxHourSlotHeight = 150.;
 		[_timedEventsView registerClass:MGCEventCell.class forCellWithReuseIdentifier:EventCellReuseIdentifier];
         [_timedEventsView registerClass:UICollectionReusableView.class forSupplementaryViewOfKind:DimmingViewKind withReuseIdentifier:DimmingViewReuseIdentifier];
 		UILongPressGestureRecognizer *longPress = [UILongPressGestureRecognizer new];
+    longPress.minimumPressDuration = 0.3
 		[longPress addTarget:self action:@selector(handleLongPress:)];
 		[_timedEventsView addGestureRecognizer:longPress];
 		
@@ -901,6 +902,8 @@ static const CGFloat kMaxHourSlotHeight = 150.;
 		//[_allDayEventsView registerClass:UICollectionReusableView.class forSupplementaryViewOfKind:MoreEventsViewKind withReuseIdentifier:MoreEventsViewReuseIdentifier];  // test
 		
 		UILongPressGestureRecognizer *longPress = [UILongPressGestureRecognizer new];
+    longPress.minimumPressDuration = 0.3
+
 		[longPress addTarget:self action:@selector(handleLongPress:)];
 		[_allDayEventsView addGestureRecognizer:longPress];
 		
