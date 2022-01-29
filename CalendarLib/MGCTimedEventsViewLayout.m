@@ -143,8 +143,6 @@ static NSString* const EventCellsKey = @"EventCellsKey";
         }
         @catch (NSException *exception) {
           NSLog(@"%@", exception.reason);
-          NSLog(@"Char at index %d cannot be found", index);
-          NSLog(@"Max index is: %lu", [test length] - 1);
         }
     }
     
