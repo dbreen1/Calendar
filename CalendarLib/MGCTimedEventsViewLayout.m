@@ -122,11 +122,12 @@ static NSString* const EventCellsKey = @"EventCellsKey";
     NSInteger numItems = [self.collectionView numberOfItemsInSection:section];
     NSMutableArray *layoutAttribs = [NSMutableArray arrayWithCapacity:numItems];
     
-    for (NSInteger item = 0; item < numItems; item++) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:item inSection:section];
-        
-        CGRect rect = [self.delegate collectionView:self.collectionView layout:self rectForEventAtIndexPath:indexPath];
-        if (!CGRectIsNull(rect)) {
+    for (NSInteger item = 0; item < numItems; item++) {        
+        @try {
+          NSIndexPath *indexPath = [NSIndexPath indexPathForItem:item inSection:section];
+
+          CGRect rect = [self.delegate collectionView:self.collectionView layout:self rectForEventAtIndexPath:indexPath];
+          if (!CGRectIsNull(rect)) {
             MGCEventCellLayoutAttributes *cellAttribs = [MGCEventCellLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
             
             rect.origin.x = self.dayColumnSize.width * indexPath.section;
@@ -138,6 +139,12 @@ static NSString* const EventCellsKey = @"EventCellsKey";
             cellAttribs.zIndex = 1;  // should appear above dimming views
             
             [layoutAttribs addObject:cellAttribs];
+          }
+        }
+        @catch (NSException *exception) {
+          NSLog(@"%@", exception.reason);
+          NSLog(@"Char at index %d cannot be found", index);
+          NSLog(@"Max index is: %lu", [test length] - 1);
         }
     }
     
