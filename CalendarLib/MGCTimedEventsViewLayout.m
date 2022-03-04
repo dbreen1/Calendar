@@ -142,7 +142,7 @@ static NSString* const EventCellsKey = @"EventCellsKey";
           }
         }
         @catch (NSException *exception) {
-          NSLog(@"%@", exception.reason);
+
         }
     }
     
