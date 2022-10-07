@@ -1366,11 +1366,21 @@ static const CGFloat kMaxHourSlotHeight = 150.;
 		}
 	}
 	else {
-		if ([self.dataSource respondsToSelector:@selector(dayPlannerView:canMoveEventOfType:atIndex:date:toType:date:)]) {
-			if (date && ![self.dataSource dayPlannerView:self canMoveEventOfType:self.movingEventType atIndex:self.movingEventIndex date:self.movingEventDate toType:type date:date]) {
-				self.acceptsTarget = NO;
-			}
-		}
+    @try {
+      if ([self.dataSource respondsToSelector:@selector(dayPlannerView:canMoveEventOfType:atIndex:date:toType:date:)]) {
+        if (date && ![self.dataSource dayPlannerView:self canMoveEventOfType:self.movingEventType atIndex:self.movingEventIndex date:self.movingEventDate toType:type date:date]) {
+          self.acceptsTarget = NO;
+        }
+		  }
+    }
+    @catch (NSException *exception) {
+        // NSLog(@"%@", exception.reason);
+        // NSLog(@"Char at index %d cannot be found", index);
+        // NSLog(@"Max index is: %lu", [test length] - 1);
+    }
+    @finally {
+        // NSLog(@"Finally condition");
+    }
 	}
 	
 	self.interactiveCell.forbiddenSignVisible = !self.acceptsTarget;
